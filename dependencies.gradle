@@ -1,0 +1,20 @@
+ext {
+  dependencies = [junit             : 'junit:junit:4.12',
+                  mockito           : 'org.mockito:mockito-core:2.7.7',
+                  espresso          : 'com.android.support.test.espresso:espresso-core:2.2.2',
+
+                  constraintLayout  : 'com.android.support.constraint:constraint-layout:1.0.2',
+                  supportAppcompat  : 'com.android.support:appcompat-v7:26.0.0-beta2',
+                  dialog            : 'com.github.daolq3012:DialogManager:0.1',
+
+                  rxJava            : 'io.reactivex.rxjava2:rxjava:2.1.1',
+                  rxAndroid         : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+
+                  retrofit2         : 'com.squareup.retrofit2:retrofit:2.3.0',
+                  retrofit2Adapter  : 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0',
+                  retrofitGson      : 'com.squareup.retrofit2:converter-gson:2.3.0',
+                  loggingInterceptor: 'com.squareup.okhttp3:logging-interceptor:3.8.1',
+                  okhttp            : 'com.squareup.okhttp3:okhttp:3.8.1',
+
+                  glide             : 'com.github.bumptech.glide:glide:3.8.0',]
+}
