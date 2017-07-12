@@ -6,6 +6,9 @@ apply plugin: 'kotlin-android-extensions'
 
 apply from: '../autodimension.gradle'
 
+/**
+ * start config and check ci*/
+apply from: '../checkci_kotlin.gradle'
 
 def APP_ID = "com.fstyle.comparerxjava1vsrxjava2"
 
@@ -24,6 +27,15 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
