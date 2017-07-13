@@ -7,15 +7,16 @@ jdk: oraclejdk8
 before_cache:
 
  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-
  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
  directories:
 
- - $HOME/.gradle/caches/
+  - $HOME/.gradle/caches/
 
- - $HOME/.gradle/wrapper/
+  - $HOME/.gradle/wrapper/
+
+  - $HOME/.android/build-cache
 
 env:
  global:
@@ -27,6 +28,8 @@ env:
  - ANDROID_BUILD_TOOLS=25.0.3
 
  - ADB_INSTALL_TIMEOUT=5 # minutes
+
+ - secure: "hp0qxMsUiYXqQ+dAxWg8I1+tij8A1bcpaRjV0uRn4nfYG7pFHj1BVop0dt4nzboATQt5N6I6ovIdlTsw822+XN2dwlbJgsLCIjQJwVwG+Invqr0c3D0FZ/iE+G9nfgQSoPMXUayXQbmY5LXXvg3p1CX01AXbVqVKozYB24oHuGpDXb2FYA9ACXiAXOthBeWeGT0KepRukR8p98lMPmclFjWgNZytlQ8E6gRaH75OXjNpcIe5QfqrodAMcCzKowa29BKieecNzRvuQDaopzfVUEMabQrKgv1TC2Kvcd55V3DSDWEvSQ2xLD7ygts1a2g8oPtyaVKCO0QvrgPKTWuVZHbdFPVdDEcdNTZUXNaYu7RkwnhuHcUzDWC/wo4EYQpjMVK+wu+krlR0lUlupEotY9Pi0hxu88w1W87ihDCP8F7dkp9qdKnRGeIhoUEUTtsVft2zaa9gIq8yjAzIspULLrosRd/gk8YUUywTIXxSch4++0AWFf55BvVCQbSUIaZFVA6SSd8FcfQAn2I3DUbzCRFzbIBJxxSZxrZcqgZy1mFPn06kOQUdCK+Rx3lAQUNgwEaJEjTaZOeNS58ZIGlaNDo5cnxIyQRQnp30K2zj0uAgZkQ+UE4ukxbERPzz7fF1ML1IWUm6r5BqOriKPxafQO7tMlwpeDnKpC/mYH7q7Q4="
 
 android:
  components:
@@ -71,16 +74,24 @@ before_install:
 - chmod +x gradlew
 - ./gradlew dependencies || true
 
+# Open when apply BDD
+#before_script:
+#
+#- echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
+#
+#- emulator -avd test -no-skin -no-audio -no-window &
+#
+#- android-wait-for-emulator
+#
+#- adb shell input keyevent 82 &
+#
+#script:
+#
+#- ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
+
 before_script:
-
-- echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
-
-- emulator -avd test -no-skin -no-audio -no-window &
-
-- android-wait-for-emulator
-
-- adb shell input keyevent 82 &
+- sh scripts/installGem.sh
 
 script:
 
-- ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
+- sh scripts/buildAndReview.sh
