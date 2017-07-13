@@ -29,7 +29,15 @@ env:
 
  - ADB_INSTALL_TIMEOUT=5 # minutes
 
+ - STATUS_BUID=ok2
+
+ - ROOM_ID=123
+
+ - TEAM=[To:2135825][To:2198020][To:2198033][To:1979687][To:2423114][To:2391265]
+
  - secure: "hp0qxMsUiYXqQ+dAxWg8I1+tij8A1bcpaRjV0uRn4nfYG7pFHj1BVop0dt4nzboATQt5N6I6ovIdlTsw822+XN2dwlbJgsLCIjQJwVwG+Invqr0c3D0FZ/iE+G9nfgQSoPMXUayXQbmY5LXXvg3p1CX01AXbVqVKozYB24oHuGpDXb2FYA9ACXiAXOthBeWeGT0KepRukR8p98lMPmclFjWgNZytlQ8E6gRaH75OXjNpcIe5QfqrodAMcCzKowa29BKieecNzRvuQDaopzfVUEMabQrKgv1TC2Kvcd55V3DSDWEvSQ2xLD7ygts1a2g8oPtyaVKCO0QvrgPKTWuVZHbdFPVdDEcdNTZUXNaYu7RkwnhuHcUzDWC/wo4EYQpjMVK+wu+krlR0lUlupEotY9Pi0hxu88w1W87ihDCP8F7dkp9qdKnRGeIhoUEUTtsVft2zaa9gIq8yjAzIspULLrosRd/gk8YUUywTIXxSch4++0AWFf55BvVCQbSUIaZFVA6SSd8FcfQAn2I3DUbzCRFzbIBJxxSZxrZcqgZy1mFPn06kOQUdCK+Rx3lAQUNgwEaJEjTaZOeNS58ZIGlaNDo5cnxIyQRQnp30K2zj0uAgZkQ+UE4ukxbERPzz7fF1ML1IWUm6r5BqOriKPxafQO7tMlwpeDnKpC/mYH7q7Q4="
+
+ - secure: "mrrAIEzXqdyyzJp4Ca9O5obz+5jgF0sOLPJ8WutdJ9CNcEZb+WOlbbJlY2QwV50k55tjthe8rcPqHqH17m66crPbe+PG9Ye1ZSydlX6dZkqxa0blRShIhgAi2/c+T8V6djMOfzYOCnMxwlvnugC62fSMOkesuaVdUxGPvjMbcd+iqOj5svRHcfI2YPXgdOn24LPh47G7+a7bMgctpyUvJy/6ulxDsXUSAmouCVdSPxYnRnBXULVc9TU4giII+g/enFnu24rIYgiEezrFY03qPN0AW3rP0nXDHb92AIukT9A8za97FqgLreeif1BIeJG+jWGDrT0mOspw1COT4kU/bsjMM8jfxjwRkNTlgy8cr2Y1KGgEKAJQjSPYF9tIm4wBfFMMI1jCkozTac5LWkjumg/vCb+SB98XL3el/Chty34xpylWUhokdKMLe5SZzNqzH1W/B2MWhJU6CyQuF/zv/hZ20c2aXZNU8p52U1XSiYU7t+ROmTpUfBd68bxWWm0u96M0g9ctVzVak+kQkDKu0Y7CeuqNxyEQKQ4ylksjxYQ+FMdqR63NR+9aT8ybFiO98EDXGIyRrB3K/lD2gARGIx5/og17OUWq6XJqrIWIl+rk7q5gW9kp5cvdrf1xWg+ZC2geJOxYMTuxT+QQMjcjnkZfec0CbbGpuu0Fq6l7wuk="
 
 android:
  components:
@@ -66,13 +74,13 @@ android:
 
 before_install:
 
-- mkdir "$ANDROID_HOME/licenses" || true
+ - mkdir "$ANDROID_HOME/licenses" || true
 
-- echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-- echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+ - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+ - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 
-- chmod +x gradlew
-- ./gradlew dependencies || true
+ - chmod +x gradlew
+ - ./gradlew dependencies || true
 
 # Open when apply BDD
 #before_script:
@@ -90,8 +98,17 @@ before_install:
 #- ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
 
 before_script:
-- sh scripts/installGem.sh
+
+ - sh scripts/installGem.sh
 
 script:
 
-- sh scripts/buildAndReview.sh
+ - sh scripts/buildAndReview.sh
+
+after_failure:
+
+ - STATUS_BUID=problem
+
+after_script:
+
+ - sh scripts/pushNotification.sh
