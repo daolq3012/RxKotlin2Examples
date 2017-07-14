@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">CompareRxJava1VsRxJava2</string>
+    <string name="buffer">Buffer</string>
+    <string name="flatmap">FlatMap</string>
+    <string name="group_by">GroupBy</string>
+    <string name="map">Map</string>
+    <string name="scan">Scan</string>
+    <string name="window">Window</string>
+    <string name="transforming_operators">Transforming Operators</string>
+    <string name="filtering_observables">Filtering Observables</string>
+    <string name="combining_observables">Combining Observables</string>
+    <string name="error_handling_operators">Error Handling Operators</string>
+    <string name="observable_utility_operators">Observable Utility Operators</string>
+    <string name="conditional_and_boolean_operators">Conditional and Boolean Operators</string>
+    <string name="mathematical_and_aggregate_operators">Mathematical and Aggregate Operators</string>
+    <string name="backpressure_operators">Backpressure Operators</string>
+    <string name="connectable_observable_operators">Connectable Observable Operators</string>
+    <string name="operators_to_convert_observables">Operators to Convert Observables</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buffer_operator">Buffer Operator</string>
+    <string name="do_some_work">Do Some Work</string>
 </resources>
