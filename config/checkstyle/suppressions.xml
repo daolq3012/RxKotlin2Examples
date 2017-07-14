@@ -21,7 +21,10 @@
     "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
 
 <suppressions>
-
+    <!-- Exclude all Kotlin files -->
+    <suppress checks=".*" files=".*\.kt" />
+    <!-- RenderThread adopted code -->
+    <suppress checks=".*" files="me[\\/]eugeniomarletti[\\/]renderthread[\\/]" />
     <suppress checks="." files=".*/androidTest/*.*.java" /><!--Disable AndroidTest Source-->
     <suppress checks="." files=".*/test/*.*.java" /><!--Disable AndroidTest Source-->
     <suppress checks="*" files="[/\\]test[/\\]java[/\\]" />
