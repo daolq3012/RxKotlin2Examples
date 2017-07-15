@@ -21,4 +21,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="buffer_operator">Buffer Operator</string>
     <string name="do_some_work">Do Some Work</string>
+    <string name="debounce">Debounce</string>
+    <string name="distinct">Distinct</string>
+    <string name="elementat">ElementAt</string>
+    <string name="filter">Filter</string>
+    <string name="first">First</string>
+    <string name="ignore_elements">Ignore Elements</string>
+    <string name="last">Last</string>
+    <string name="skip">Skip</string>
+    <string name="skip_last">Skip Last</string>
+    <string name="take">Take</string>
+    <string name="take_last">Take Last</string>
 </resources>
