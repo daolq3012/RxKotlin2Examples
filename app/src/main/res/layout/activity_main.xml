@@ -46,10 +46,10 @@
         app:layout_constraintVertical_bias="0.22"
         />
     <Button
-        android:id="@+id/btnErrorHandle"
+        android:id="@+id/btnOthers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/error_handling_operators"
+        android:text="@string/others"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -58,74 +58,15 @@
         app:layout_constraintVertical_bias="0.33"
         />
     <Button
+        android:id="@+id/btnCreating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/observable_utility_operators"
+        android:text="@string/creating_observables"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44"
-        />
-    <Button
-        android:id="@+id/btnConditionAndBoolean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/conditional_and_boolean_operators"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55"
-        />
-    <Button
-        android:id="@+id/btnMathAndAggregate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mathematical_and_aggregate_operators"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
-        />
-    <Button
-        android:id="@+id/btnBackPressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/backpressure_operators"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77"
-        />
-    <Button
-        android:id="@+id/btnConnectable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/connectable_observable_operators"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88"
-        />
-    <Button
-        android:id="@+id/btnConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/operators_to_convert_observables"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.99"
         />
 </android.support.constraint.ConstraintLayout>

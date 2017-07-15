@@ -39,4 +39,20 @@
     <string name="startwith">StartWith</string>
     <string name="switch_">Switch</string>
     <string name="zip">Zip</string>
+    <string name="catch_">Catch</string>
+    <string name="retry">Retry</string>
+    <string name="amb">Amb</string>
+    <string name="concat">Concat</string>
+    <string name="others">Others</string>
+    <string name="creating_observables">Creating Observables</string>
+    <string name="create">Create</string>
+    <string name="defer">Defer</string>
+    <string name="empty_never_throw">Empty/Never/Throw</string>
+    <string name="from">From</string>
+    <string name="interval">Interval</string>
+    <string name="just">Just</string>
+    <string name="range">Range</string>
+    <string name="repeat">Repeat</string>
+    <string name="start">Start</string>
+    <string name="timer">Timer</string>
 </resources>

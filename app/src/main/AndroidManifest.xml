@@ -23,6 +23,10 @@
         <activity android:name=".transform.FilteringActivity"/>
         <activity android:name=".combine.CombiningActivity">
         </activity>
+        <activity android:name=".others.OthersActivity">
+        </activity>
+        <activity android:name=".create.CreateActivity">
+        </activity>
     </application>
 
 </manifest>
