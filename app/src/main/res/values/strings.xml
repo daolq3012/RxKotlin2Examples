@@ -32,4 +32,11 @@
     <string name="skip_last">Skip Last</string>
     <string name="take">Take</string>
     <string name="take_last">Take Last</string>
+    <string name="and_then_when">And /Then/ When</string>
+    <string name="combinelatest">CombineLatest</string>
+    <string name="join">Join</string>
+    <string name="zipObservable">Merge</string>
+    <string name="startwith">StartWith</string>
+    <string name="switch_">Switch</string>
+    <string name="zip">Zip</string>
 </resources>

@@ -41,7 +41,11 @@ abstract class BaseFragment : Fragment() {
   }
 
   fun getObservable(): Observable<String> {
-    return Observable.just("one", "two", "three", "four", "five")
+    return Observable.fromArray("one", "two", "three", "four", "five")
+  }
+
+  fun getObservableSecond(): Observable<String> {
+    return Observable.just("one2", "two2", "three2", "four2")
   }
 
   fun subscribe(observable: Observable<String>): Disposable {
