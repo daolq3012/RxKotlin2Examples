@@ -3,6 +3,7 @@ package com.fstyle.comparerxjava1vsrxjava2
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.fstyle.comparerxjava1vsrxjava2.combine.CombiningActivity
 import com.fstyle.comparerxjava1vsrxjava2.transform.FilteringActivity
 import com.fstyle.comparerxjava1vsrxjava2.transform.TransformingActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
     }
     btnFilter.setOnClickListener {
       startActivity(Intent(this@MainActivity, FilteringActivity::class.java))
+    }
+    btnCombining.setOnClickListener {
+      startActivity(Intent(this@MainActivity, CombiningActivity::class.java))
     }
   }
 }

@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".transform.TransformingActivity"/>
         <activity android:name=".transform.FilteringActivity"/>
+        <activity android:name=".combine.CombiningActivity">
+        </activity>
     </application>
 
 </manifest>
