@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CompareRxJava1VsRxJava2</string>
+    <string name="app_name">RxKotlin2Examples</string>
     <string name="buffer">Buffer</string>
     <string name="flatmap">FlatMap</string>
     <string name="group_by">GroupBy</string>
