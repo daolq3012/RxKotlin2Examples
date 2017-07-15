@@ -2,12 +2,43 @@
 [![Build Status](https://travis-ci.org/daolq3012/CompareRxJava1VsRxJava2.svg?branch=master)](https://travis-ci.org/daolq3012/CompareRxJava1VsRxJava2)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-A Project is Examples RxJava2 write by **Kotlin** based on [amitshekhariitbhu/RxJava2-Android-Samples](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples) :
+A Project is Examples RxJava2 write by **Kotlin**
 
-## ☑ TODO
-
-- [ ] Add sample follow [amitshekhariitbhu]() by kotlin
-
+## Examples of Operators in this Project
+### Creating Observables
+  
+  - Create
+  - Defer
+  - Empty/Never/Throw 
+  - From 
+  - Interval 
+  - Timer 
+### Transforming Observables
+  - Buffer 
+  - Flatmap
+  - GroupBy
+  - Map
+  - Scan
+  - Window
+### Filtering Observables
+  - Debounce 
+  - Distinct 
+  - ElementAt 
+  - Filter 
+  - First 
+  - IgnoreElements 
+  - Last
+  - Skip
+  - SkipLast
+  - Take
+  - TakeLast
+### Combining Observables
+  - CombineLatest 
+  - Join 
+  - Merge
+  - StartWith
+  - Switch
+  - Zip
 ## 👬 Contribution
 
 The Example are built using [Android studio](https://developer.android.com/studio/index.html)
