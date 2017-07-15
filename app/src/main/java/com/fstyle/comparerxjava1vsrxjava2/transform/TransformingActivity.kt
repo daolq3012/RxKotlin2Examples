@@ -14,6 +14,10 @@ class TransformingActivity : AppCompatActivity() {
     setContentView(R.layout.activity_transforming)
     btnBuffer.setOnClickListener { replaceFragment(BufferFragment.newInstance()) }
     btnFlatMap.setOnClickListener { replaceFragment(FlatmapFragment.newInstance()) }
+    btnGroupBy.setOnClickListener { replaceFragment(GroupByFragment.newInstance()) }
+    btnMap.setOnClickListener { replaceFragment(MapFragment.newInstance()) }
+    btnScan.setOnClickListener { replaceFragment(ScanFragment.newInstance()) }
+    btnWindow.setOnClickListener { replaceFragment(WindowFragment.newInstance()) }
   }
 
   fun replaceFragment(fragment: Fragment) {
